@@ -16,8 +16,12 @@ from datetime import datetime, timedelta
 os.environ["TF_ENABLE_ONEDNN_OPTS"] = "1"
 
 # ---------------- CONFIG ----------------
-API_KEY = st.secrets["d53f8bfa2b8c8951186b2d5aa9998e0e"]
+API_KEY = st.secrets["OPENWEATHER_API_KEY"]
 
+if "OPENWEATHER_API_KEY" not in st.secrets:
+    st.error("API key not configured")
+    st.stop()
+    
 PAST_HOURS = 72
 FUTURE_DAYS = 7
 QUANTILES = [0.1, 0.5, 0.9]
