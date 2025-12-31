@@ -1,10 +1,11 @@
-streamlit==1.32.2
-tensorflow==2.20.0
+streamlit
+tensorflow
 numpy
 pandas
 scikit-learn
 requests
 protobuf
+
 
 
 
